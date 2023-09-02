@@ -56,7 +56,7 @@ $pdo->exec("CREATE TABLE users (username VARCHAR(255), password VARCHAR(255))");
 /**
  * MD5 has been changed to bcrypt with a salt (uses password_verify to check the password matches rather than
  * checking for an exact match in the database.) The password_hash method should be used to store these
- * passwords in the DB (not in this code)
+ * passwords in the DB
  * 
  * Password hashing via MD5 is poor - the hash will always be the same if two users share the
  * same password, as no salt is used. This could lead to a brute force attack where many common
